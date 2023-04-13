@@ -16,5 +16,6 @@
 
 .idea
 vendor/
+static/tasks/
 
 .env

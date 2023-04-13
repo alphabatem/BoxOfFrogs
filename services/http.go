@@ -3,6 +3,7 @@ package services
 import (
 	"errors"
 	"fmt"
+	"github.com/alphabatem/autodevgpt/dto"
 	"github.com/cloakd/common/context"
 	"github.com/cloakd/common/services"
 	"github.com/gin-contrib/cors"
@@ -15,6 +16,8 @@ type HttpService struct {
 	services.DefaultService
 	BaseURL string
 	Port    int
+
+	tsvc *TaskService
 }
 
 var ErrUnauthorized = errors.New("unauthorized")
@@ -37,7 +40,7 @@ func (svc *HttpService) Configure(ctx *context.Context) error {
 }
 
 func (svc *HttpService) Start() error {
-	//svc.imgSvc = svc.Service(IMAGE_SVC).(*ImageService)
+	svc.tsvc = svc.Service(TASK_SVC).(*TaskService)
 
 	r := gin.Default()
 
@@ -80,6 +83,17 @@ func (svc *HttpService) ping(c *gin.Context) {
 	c.JSON(200, gin.H{
 		"message": "pong",
 	})
+}
+
+func (svc *HttpService) completePrompt(c *gin.Context) {
+
+	var req dto.PromptRequest
+	err := c.ShouldBind(&req)
+	if err != nil {
+		svc.paramErr(c, err)
+		return
+	}
+
 }
 
 //HELPERS Below
