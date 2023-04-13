@@ -1,0 +1,7 @@
+{
+  "name": "Scoping Agent",
+  "tags": [
+	"#project_management"
+  ],
+  "prompt": "You are a world class software engineer.\n\nI need you to draft a technical software spec for building the following:\n{{description}}\n\nThink through how you would build it step by step.\n\nThen, respond with the complete spec as a well-organized markdown file."
+}
