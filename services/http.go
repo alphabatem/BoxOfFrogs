@@ -55,7 +55,7 @@ func (svc *HttpService) Start() error {
 	//Validation endpoints
 	r.GET("/ping", svc.ping)
 
-	v1 := r.Group("/v1")
+	//v1 := r.Group("/v1")
 	//docs.SwaggerInfo.BasePath = "/v1"
 
 	//v1.POST("sites", svc.createSite)

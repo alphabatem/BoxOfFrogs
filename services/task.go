@@ -1,7 +1,7 @@
 package services
 
 import (
-	"github.com/alphabatem/AutoDevGPT/models"
+	"github.com/alphabatem/autodevgpt/models"
 	"github.com/cloakd/common/services"
 )
 

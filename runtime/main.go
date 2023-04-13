@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/alphabatem/AutoDevGPT/openai"
-	"github.com/alphabatem/AutoDevGPT/services"
+	"github.com/alphabatem/autodevgpt/openai"
+	"github.com/alphabatem/autodevgpt/services"
 	"github.com/cloakd/common/context"
 	"github.com/joho/godotenv"
 	"log"
@@ -15,7 +15,7 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	ctx, err := context.NewCtx(
+	ctx, err := context.NewContext(
 		&openai.OpenaiService{},
 		&services.AgentService{},
 		&services.TaskService{},

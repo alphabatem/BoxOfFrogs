@@ -2,7 +2,7 @@ package services
 
 import (
 	"fmt"
-	"github.com/alphabatem/AutoDevGPT/models"
+	"github.com/alphabatem/autodevgpt/models"
 	"github.com/cloakd/common/services"
 	"sort"
 	"sync"
