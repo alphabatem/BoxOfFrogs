@@ -32,7 +32,7 @@ func (svc OpenaiService) Id() string {
 
 func (svc *OpenaiService) Start() error {
 	svc.apiKey = os.Getenv("OPENAI_API_KEY")
-	svc.BaseURI = "https://api.com/v1"
+	svc.BaseURI = "https://api.openai.com/v1"
 	svc.client = &http.Client{}
 
 	return nil

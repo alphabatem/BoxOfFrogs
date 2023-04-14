@@ -4,5 +4,15 @@ type Action int
 
 const (
 	ActionDefault = iota
-	ActionFileSave
+	Description   = iota
+	FileSave
+)
+
+type Status string
+
+const (
+	Backlog    = "backlog"
+	InProgress = "in-progress"
+	Testing    = "testing"
+	Completed  = "completed"
 )

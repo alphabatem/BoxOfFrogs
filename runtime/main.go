@@ -19,6 +19,7 @@ func main() {
 		&openai.OpenaiService{},
 		&services.AgentService{},
 		&services.TaskService{},
+		&services.ProjectService{},
 		&services.HttpService{},
 	)
 

@@ -1,7 +1,9 @@
 {
   "name": "Task Agent",
-  "tags": ["#project_management"],
-  "prompt": "You are a world class software engineer.\n\n Using this technical software spec {{description}} break each work item into its own sub-steps outlining exactly what should be done then respond with the complete task list in JSON",
-  "rules": [
-  ]
+  "worker": "task",
+  "tags": [
+	"task"
+  ],
+  "output": ["development"],
+  "prompt": "You are an world class software engineer. Read through the technical paper, then respond with a list of detailed user stories outlining each task needed to build the project. Start each story with ~~.\n {{description}}"
 }

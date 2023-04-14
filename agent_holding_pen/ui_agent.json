@@ -1,9 +1,10 @@
 {
   "name": "UI/UX Design Agent",
+  "worker": "openai",
   "tags": [
-	"#ui_design",
-	"#ux_design"
+	"design"
   ],
+  "output": ["human"],
   "prompt": "As a software developer, create user interface and user experience designs for the software. Use the tags #ui_design and #ux_design to identify relevant tasks.",
   "rules": [
 	"Only focus on tasks tagged with #ui_design and #ux_design.",

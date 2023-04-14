@@ -17,7 +17,7 @@ type HttpService struct {
 	BaseURL string
 	Port    int
 
-	tsvc *TaskService
+	psvc *ProjectService
 }
 
 var ErrUnauthorized = errors.New("unauthorized")
@@ -40,7 +40,7 @@ func (svc *HttpService) Configure(ctx *context.Context) error {
 }
 
 func (svc *HttpService) Start() error {
-	svc.tsvc = svc.Service(TASK_SVC).(*TaskService)
+	svc.psvc = svc.Service(PROJECT_SVC).(*ProjectService)
 
 	r := gin.Default()
 
@@ -94,6 +94,13 @@ func (svc *HttpService) completePrompt(c *gin.Context) {
 		return
 	}
 
+	p, err := svc.psvc.Execute(&req)
+	if err != nil {
+		svc.httpError(c, err)
+		return
+	}
+
+	c.JSON(200, p)
 }
 
 //HELPERS Below

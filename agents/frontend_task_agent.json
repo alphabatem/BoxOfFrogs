@@ -1,0 +1,11 @@
+{
+  "name": "Frontend Task Agent",
+  "worker": "developer",
+  "tags": [
+	"frontend"
+  ],
+  "output": [
+	"task"
+  ],
+  "prompt": "You are a world class software engineer using {{frontend.framework}} to build a frontend application.\n\nI need you to draft a detailed technical software spec for building the frontend of the provided scope. Think through how you would build it step by step.\n\nThen, respond with the complete spec as a well-organized markdown file containing the tasks for the routes, views, components and api endpoints. {{description}}"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Testing Agent",
+  "worker": "openai",
+  "tags": ["testing"],
+  "output": ["test_execution"],
+  "prompt": "As a world class software engineer, review the code and write a test to verify the functionality of this code outputting the code only."
+}
